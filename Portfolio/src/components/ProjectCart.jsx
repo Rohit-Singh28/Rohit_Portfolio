@@ -11,7 +11,7 @@ const ProjectCart = ({ title, description, tech, image }) => {
                     viewport={{ once: true }}
 
                     transition={{ duration: 1, delay: 1 }}
-                    className='w-[50%] ml-[25%] h-[200px]  mt-8 object-fill' />
+                    className='w-[80%] md:w-[50%] ml-[10%] md:ml-[25%] h-[200px]  mt-8 object-fill' />
             </div>
             <div className='flex flex-col w-full md:w-[50%] gap-4'>
                 <div>
