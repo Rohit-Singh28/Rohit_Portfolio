@@ -1,30 +1,19 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import AboutUs from './components/AboutUs'
-import Contact from './components/Contact'
+import Footer from './components/Footer'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
-import Technology from './components/Technology'
+
 
 
 function App() {
 
   return (
-    <div className=' text-slate-300 gap-y-4 '>
+    <div className=' '>
       <Header />
-      <Hero />
-      <div className='w-full h-[0.1px] bg-slate-700'>
+      <div className=''>
+        <Outlet />
       </div>
-      <AboutUs />
-      <div className='w-full h-[0.1px] bg-slate-700'>
-      </div>
-      <Technology />
-      <div className='w-full h-[0.1px] bg-slate-700'>
-      </div>
-      <Projects />
-      <div className='w-full h-[0.1px] bg-slate-700'>
-      </div>
-      <Contact/>
+      <Footer />
     </div>
 
   )

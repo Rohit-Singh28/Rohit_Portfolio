@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion"
+import emailjs from '@emailjs/browser'
 
 
 const Contact = () => {
@@ -23,21 +24,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    emailjs.send('service_zdu8l8q', 'template_z4dmoqm',  data ,'6EbxSbZ5jm5ZhR2j5')
+      .then((result) => {
+          window.location.reload()  
+      }, (error) => {
+          console.log(error);
+      });
   }
 
   return (
-    <div className=' my-6  w-[80%] md:w-[35%] px-4 mx-auto mb-[100pxt]'>
+    <div className=' my-6  w-[80%] md:w-[35%] px-4 mx-auto mb-[100pxt] text-slate-300'>
       <motion.h1
-        initial={{opacity:0,y:-100}}
-        whileInView={{y:0,opacity:1}}
-        transition={{duration:0.6,delay:0.6}}
-        className='text-center font-bold p-2 text-2xl my-6'>Contact</motion.h1>
-      <motion.div 
-        initial={{opacity:0,x:-100}}
-        whileInView={{x:0,opacity:1}}
-        transition={{duration:0.6,delay:0.8}}
-        
-        className=' bg-gradient-to-tl from-red-500 to-blue-700 p-4 rounded w-full max-w-2xl h-full max-h-[80%]  shadow-xl  mx-auto '>
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className='text-center font-bold p-2 text-3xl my-6'>Contact</motion.h1>
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+
+        transition={{ duration: 0.6, delay: 0.8 }}
+
+        className=' bg-gradient-to-tl from-blue-900 to-slate-900 p-4 rounded w-full max-w-2xl h-full max-h-[80%]  shadow-xl  mx-auto '>
 
         <form className='grid p-4 gap-2  h-full pb-5' onSubmit={handleSubmit} >
           <label htmlFor='name'>Name :</label>
@@ -89,8 +100,8 @@ const Contact = () => {
           </textarea>
 
 
-          <div>
-            <button type='submit' className='px-3 py-2 my-4 bg-red-600 text-white mb-10 hover:bg-red-700'>Submit</button>
+          <div className=''>
+            <button type='submit' className='px-3 py-2 my-4 bg-gradient-to-tl from-blue-900 to-slate-800 border rounded-lg  hover:font-bold duration-200 text-white mb-10 '>Submit</button>
           </div>
         </form>
       </motion.div>

@@ -17,13 +17,14 @@ const Hero = () => {
 
     const containerImg = (delay) => ({
         hidden: { x: 10, opacity: 0 },
-        visible: { x: 0, opacity: 1,rotate:12, transition: { duration: 0.5, delay: delay } }
+        visible: { x: 0, opacity: 1, rotate: 12, transition: { duration: 0.5, delay: delay } }
     });
-    
+
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: ['Full Stack Developer'],
+            strings: ['Full Stack Developer '],
+            // loop:Infinity,
             typeSpeed: 90,
         });
 
@@ -34,7 +35,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <div className=' md:h-[calc(100vh-80px)] px-8 my-6 md:my-2 flex flex-wrap items-center gap-24 md:gap-6 '>
+        <div className=' md:h-[calc(100vh-80px)] px-8 my-6 md:my-2 flex flex-wrap items-center gap-24 md:gap-6 overflow-x-hidden'>
             <div className='flex flex-col lg:w-[47%] gap-12'>
                 <div className=''>
                     <motion.h1
@@ -42,10 +43,10 @@ const Hero = () => {
                         initial="hidden"
                         animate="visible"
                         className=' text-5xl md:text-6xl font-semibold'>Rohit Singh</motion.h1>
-                    <motion.h2 
-                         variants={container(0.9)}
-                         initial="hidden"
-                         animate="visible"
+                    <motion.h2
+                        variants={container(0.9)}
+                        initial="hidden"
+                        animate="visible"
                         className='my-6 text-2xl md:text-4xl bg-gradient-to-r from-pink-400 to-blue-800 bg-clip-text text-transparent'><span ref={el}></span></motion.h2>
                 </div>
                 <div>
@@ -63,25 +64,33 @@ const Hero = () => {
                 </div>
             </div>
             <div className=' md:h-[450px] mx-auto relative'>
-                <motion.img src={image1} alt="image" 
+                <motion.img src={image1} alt="image"
                     variants={containerImg(1.2)}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
+
                     className='md:h-[200px] h-[120px] w-[150px] border-none md:w-[300px]  relative -rotate-12 -z-20' />
-                <motion.img src={image2} alt="image" 
+                <motion.img src={image2} alt="image"
                     variants={containerImg(1.7)}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
+
                     className='md:h-[200px] h-[120px] w-[150px] border-none md:w-[300px]  relative top-[60px]  md:top-[100px] -rotate-12' />
-                <motion.img src={image3} alt="image" 
+                <motion.img src={image3} alt="image"
                     variants={containerImg(2)}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
+
                     className='md:h-[200px] h-[120px] w-[150px] border-none md:w-[300px]  relative top-[-150px] left-[100px] md:top-[-240px] md:left-[190px] rotate-12' />
-                <motion.img src={image4} alt="image" 
+                <motion.img src={image4} alt="image"
                     variants={containerImg(2.3)}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
+
                     className='md:h-[200px] h-[120px] w-[150px] border-none md:w-[300px]  relative top-[-280px] left-[-100px] md:top-[-440px] md:left-[-190px] rotate-12 -z-10' />
 
             </div>
