@@ -12,7 +12,7 @@ const Header = () => {
                 <ul className='flex gap-5 text-lg'>
                     <li><Link to={'/'}><RollingText text={"Home"}/></Link></li>
                     <li><Link to={'/Allproject'}><RollingText text={"Projects"}/></Link></li>
-                    <li><Link to={'/'}><RollingText text={"Home"}/></Link></li>
+                    <li><Link to={'/contact'}><RollingText text={"Contact"}/></Link></li>
                 </ul>
             </div>
         </header>

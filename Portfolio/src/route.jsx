@@ -4,6 +4,7 @@ import AboutUs from './components/AboutUs';
 import App from './App';
 import ProjectDes from './pages/ProjectDes';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
  export const routes = createBrowserRouter([
     {
@@ -25,6 +26,11 @@ import Projects from './components/Projects';
             {
                 path:"Allproject",
                 element:<Projects/>
+            },
+
+            {
+                path:'contact',
+                element: <Contact />
             }
         ]
     }
