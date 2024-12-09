@@ -33,7 +33,7 @@ const Contact = () => {
   }
 
   return (
-    <div className=' my-6  w-[80%] md:w-[35%] px-4 mx-auto mb-[100pxt] text-slate-300'>
+    <div className=' my-6  w-[100%] md:w-[35%] px-4 mx-auto mb-[100pxt] text-slate-300'>
       <motion.h1
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ y: 0, opacity: 1 }}
