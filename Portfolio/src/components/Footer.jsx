@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -12,6 +13,7 @@ const Footer = () => {
         
         <a href="https://www.linkedin.com/in/rohitsingh28" target='blank'><FaLinkedin  /></a>
         <a href="https://github.com/Rohit-Singh28" target='blank'><FaGithub  /></a>
+        <a href="mailto:rohitkamaldevsingh@gmail.com"><MdEmail/></a>
       </div>
     </div>
   )
