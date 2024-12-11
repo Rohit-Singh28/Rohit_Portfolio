@@ -14,7 +14,7 @@ const Projects = () => {
             <Link to={"/AIcademy"}>
                 <ProjectCart
                     image={AIcademy}
-                    title={"AIacdemy - Personalized Educational Website"}
+                    title={"AIcademy - Personalized Educational Website"}
                     description="This project is an educational platform developed to provide customized course content based on individual student difficulty levels, enabling tailored learning experiences. The platform integrates AI tools (Gemini AI, Llama AI) for adaptive content recommendations and YouTube resource integration. It incorporates interactive 3D visuals and a responsive design to enhance the user experience."
                     tech={["Next.js", "Shadcn", "Drizzle", "Spline", "Crek"]} />
             </Link>
