@@ -56,8 +56,8 @@ const Hero = () => {
                         animate="visible"
                         className='text-justify text-lg'>
                         I am a passionate full stack developer with a knack for crafting robust and scalable
-                        web applications. I have honed my skills in front-endtechnologies like React and
-                        taiwind CSS  as well as back-end technologies like Node.js, Express.js,and MongoDB.
+                        web applications. I have honed my skills in front-end technologies like Next.js ,React and
+                        taiwind CSS  as well as back-end technologies like Node.js, Express.js,and MongoDB & Firebase.
                         My goal is to leverage my expertise to create innovative solutionsthat drive business
                         growth and deliver exceptional user experiences.
                     </motion.p>
